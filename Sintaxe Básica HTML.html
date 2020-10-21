@@ -1,97 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	
-	<title>Sintaxe Básica HTML</title>
-	
-	<style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
 
-	fieldset { 
-		border: 3px #A9A9A9 ridge;
-		border-radius:10px;
-		width: 98%;
-		background-color: white;
-	}
-	
-	h1{ 
-		font-family: Cursive;
-		color: #000000;
-		background-color: #40E0D0;
-		text-align: center;
-		border-bottom: 1px solid black;
-		border-top: 1px solid black;
-		
-	}
-	
-	h3{
-		font-family: Cursive;
-		color: black;
-		border-bottom: 2px #A9A9A9 solid ;
-		
-		
-	}
-	
-	body{
-		font-family: Monospace;
-		background-color: #DCDCDC;
-		font size: 50
-		
-	}
-	
-	</style>
-	
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
 </head>
+<body>
 
-<body> 
-<h1> Formulário</h1>
-<fieldset>
-<FORM>
-<p><h3>
-Dados pessoais:
-</h3></p>
+<h3>Contact Form</h3>
 
-	Nome: <p><input type = "text" name="nome" size="50"
-placeholder="Digite seu nome"><br></p>
-	Sobrenome:<p><input type = "text" name = "sobrenome" size="50"
-placeholder="Digite seu sobrenome"><br></p>
-<br>
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-<p><h3>Classe pertencente</h3></p>
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
- <input type = "radio" name ="Classe" value = tour> Turística
-	<p></p><input type = "radio" name ="Classe" value = exe> Executiva</p>
-	<p><input type = "radio" name ="Classe" value = lux> Luxo</p>
-<br>
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
 
-<p><h3>Opcionais</h3></p>
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
 
-<p><input type = "checkbox" name = "opcionais" value = "Seguro"> Seguro </p>
-	<p><input type = "checkbox" name = "opcionais" value = "Bolsa Viagem"> Bolsa Viagem</p>
-	<p><input type = "checkbox" name = "opcionais" value = "Translado"> Translado</p>
-	<p><input type = "checkbox" name = "opcionais" value = "City Tour"> City Tour </p>
-<br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
 
-<p><h3>Selecione o seu destino</h3></p>
-
- <p><select name = "destinos">
-	<option value "Bonito"> Bonito </option>
-	<option value "Fernando de Noronha"> Fernando de Noronha </option>
-	<option value "Natal"> Natal </option>
-	<option value "Rio de Janeiro"> Rio de Janeiro </option>
-	<option value "Gramado"> Gramado </option>
-	</select></p>
-
-<h3>Caso queira deixar um comentário(opcional):</h3>
-	<p><textarea rows = 10 cols = 60" id = "area" > </textarea>
-</p>
-
-
-	<button onclick = "alert('No momento não há domínio algum para onde este formulário possa ser enviado.')">Enviar</button>
-	<button onclick = "reset" name = reset >Limpar</button>
-</FORM>	
-		
-	</fieldset>
-	
 </body>
 </html>
