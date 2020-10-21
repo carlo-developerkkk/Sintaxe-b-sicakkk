@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sintaxe Basica HTML</title>
+	<meta charset="UTF-8">
 	
-<!-- fiz essa parte só pra ficar mais estilizado mesmo, ja vi algumas coisas de CSS e tem na apostila-->
+	<title>Sintaxe Básica HTML</title>
 	
 	<style>
-		em {
-			
-	}
+
 	fieldset { 
 		border: 3px #A9A9A9 ridge;
 		border-radius:10px;
@@ -41,15 +39,14 @@
 		
 	}
 	
-	
 	</style>
 	
 </head>
 
 <body> 
-<h1> Formulario</h1>
+<h1> Formulário</h1>
 <fieldset>
-
+<FORM>
 <p><h3>
 Dados pessoais:
 </h3></p>
@@ -86,11 +83,15 @@ placeholder="Digite seu sobrenome"><br></p>
 	</select></p>
 
 <h3>Caso queira deixar um comentário(opcional):</h3>
-	<p><textarea rows = 10 cols = 60"></textarea></p>
+	<p><textarea rows = 10 cols = 60" id = "area" > </textarea>
+</p>
+
+
+	<button onclick = "alert('No momento não há domínio algum para onde este formulário possa ser enviado.')">Enviar</button>
+	<button onclick = "reset" name = reset >Limpar</button>
+</FORM>	
+		
+	</fieldset>
 	
-	<input type = "submit" value = "Enviar">
-	<input type = "reset" value = "Limpar">
-	
-</fieldset>
 </body>
 </html>
